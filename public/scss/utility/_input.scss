@@ -1,0 +1,23 @@
+@use '../global/colors' as cr;
+@use '../global/screens' as screen;
+
+// input column
+@mixin input-primary {
+  width: screen.$full;
+  padding: 0.75em 1em;
+  border: 1.5px solid;
+  background: transparent;
+  border-radius: screen.$rd-10;
+  color: cr.$primary;
+}
+
+// textarea column
+@mixin textarea-primary {
+  width: screen.$full;
+  padding: 0.75em 1em;
+  border: 1.5px solid;
+  resize: none;
+  background: transparent;
+  border-radius: screen.$rd-10;
+  color: cr.$primary;
+}

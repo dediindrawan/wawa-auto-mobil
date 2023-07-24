@@ -1,0 +1,621 @@
+// import all variable
+@use './public/scss/global/index' as *;
+
+// container style
+.container {
+  width: $full;
+  position: relative;
+  // wrapper navbar style
+  .wrapper-navbar {
+    height: 60px;
+    padding: $px-5;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 10;
+    @include breakpoint-down('medium') {
+      padding: $px-2;
+      line-height: 60px;
+      flex-direction: column;
+      justify-content: start;
+      align-items: start;
+      transition: transform 0.3s ease-in-out;
+    }
+    .brand-navbar {
+      display: flex;
+      justify-content: space-between;
+      @include breakpoint-down('medium') {
+        width: $full;
+      }
+      a .brand {
+        color: $default;
+      }
+      span {
+        font-size: $ft-h3;
+        color: $default;
+        cursor: pointer;
+        display: none;
+        @include breakpoint-down('medium') {
+          display: block;
+        }
+      }
+    }
+    .nav-link {
+      width: 40%;
+      display: flex;
+      justify-content: space-between;
+      @include breakpoint-down('medium') {
+        width: $full;
+        flex-direction: column;
+        transform: translate(-100%);
+        transition: transform 0.3s ease-in-out;
+      }
+      a {
+        flex: 1;
+        height: 60px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: $secondary;
+        &:hover {
+          color: $default;
+        }
+        @include breakpoint-down('medium') {
+          width: $full;
+          justify-content: start;
+        }
+        li {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-direction: column;
+        }
+      }
+    }
+  }
+  // hero section style
+  .hero-image {
+    width: $full;
+    display: flex;
+    position: relative;
+    .slide-one,
+    .slide-two,
+    .slide-three,
+    .slide-four {
+      width: $full;
+      height: $y-screen;
+      position: absolute;
+      &::after {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background: $gradient-dark;
+      }
+      img {
+        width: $full;
+        height: $full;
+        object-fit: cover;
+      }
+    }
+    .slide-one {
+      animation: slide-1 25s infinite;
+      @include slide-1;
+    }
+    .slide-two {
+      animation: slide-2 25s infinite;
+      @include slide-2;
+    }
+    .slide-three {
+      animation: slide-3 25s infinite;
+      @include slide-3;
+    }
+    .slide-four {
+      animation: slide-4 25s infinite;
+      @include slide-4;
+    }
+    .hero-text {
+      width: $full;
+      height: $y-screen;
+      padding: $px-2;
+      text-align: center;
+      position: inherit;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      color: $default;
+      .title {
+        font-weight: $ft-s-bold;
+      }
+      .description {
+        font-size: $ft-p-special;
+      }
+      .button-group {
+        margin-top: $mt-2;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 1em;
+        .btn-hero-explore {
+          @include button-warning;
+          width: 200px;
+          background: $gradient-info;
+        }
+        .btn-hero-schedule {
+          @include button-warning;
+          width: 200px;
+          background: $gradient-warning;
+        }
+      }
+    }
+  }
+  // header card style
+  .header-card {
+    width: $full;
+    padding: $px-5;
+    display: flex;
+    justify-content: center;
+    gap: 2em;
+    @include breakpoint-down('medium') {
+      flex-direction: column;
+      padding: $px-2;
+      gap: 7em;
+    }
+    .wrapper {
+      width: 30%;
+      text-align: center;
+      margin-top: -$mt-5;
+      position: relative;
+      @include header-card;
+      @include breakpoint-down('medium') {
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      i {
+        font-size: $ft-h2;
+        color: $warning;
+      }
+      .title {
+        font-weight: $ft-s-bold;
+        color: $warning;
+      }
+    }
+  }
+  // wrapper section style
+  .wrapper-section {
+    width: $full;
+    padding: $px-5;
+    @include breakpoint-down('medium') {
+      padding: $px-2;
+    }
+    // reset section
+    section {
+      padding-top: $pt-4;
+    }
+    // profile info style
+    .profile {
+      .title {
+        margin-bottom: $mb-1;
+        @include breakpoint-down('medium') {
+          text-align: center;
+        }
+        span {
+          font-weight: $ft-s-bold;
+          border-bottom: 4px solid;
+        }
+      }
+      .card {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 3em;
+        @include breakpoint-down('medium') {
+          margin-right: 0.5em;
+        }
+        .image {
+          flex: 1;
+          height: 300px;
+          border-radius: $rd-10;
+          background: $gradient-secondary;
+          @include breakpoint-down('medium') {
+            width: $full;
+          }
+          img {
+            width: $full;
+            height: $full;
+            object-fit: cover;
+            object-position: center;
+            border-radius: $rd-10;
+            transform: $translate-down;
+          }
+        }
+        .description {
+          flex: 1;
+          position: relative;
+          &::after {
+            @include abstract;
+          }
+        }
+        @include breakpoint-down('medium') {
+          flex-direction: column;
+        }
+      }
+    }
+    // service info style
+    .service {
+      .title {
+        text-align: end;
+        margin-bottom: $mb-1;
+        @include breakpoint-down('medium') {
+          text-align: center;
+        }
+        span {
+          font-weight: $ft-s-bold;
+          border-bottom: 4px solid;
+        }
+      }
+      .card {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 3em;
+        &:nth-child(even) {
+          .image {
+            order: 2;
+          }
+          .description {
+            order: 1;
+          }
+        }
+        @include breakpoint-down('medium') {
+          margin-right: 0.5em;
+          gap: 2em;
+          &:nth-child(even) {
+            .image {
+              order: 1;
+            }
+            .description {
+              order: 2;
+            }
+          }
+        }
+        .image {
+          flex: 1;
+          height: 300px;
+          border-radius: $rd-10;
+          background: $gradient-secondary;
+          @include breakpoint-down('medium') {
+            width: $full;
+          }
+          img {
+            width: $full;
+            height: $full;
+            object-fit: cover;
+            object-position: center;
+            border-radius: $rd-10;
+            transform: $translate-down;
+            @include breakpoint-down('medium') {
+              height: 300px;
+            }
+          }
+        }
+        .description {
+          flex: 1;
+          position: relative;
+          &::after {
+            @include abstract;
+          }
+          .heading {
+            h3 {
+              font-weight: $ft-s-bold;
+              i {
+                color: $success;
+              }
+            }
+          }
+        }
+        @include breakpoint-down('medium') {
+          flex-direction: column;
+          margin-top: $mt-2;
+        }
+      }
+    }
+    // testimoni style
+    .testimoni {
+      .title {
+        margin-bottom: $mb-1;
+        @include breakpoint-down('medium') {
+          text-align: center;
+        }
+        span {
+          font-weight: $ft-s-bold;
+          border-bottom: 4px solid;
+        }
+      }
+      .scroller {
+        @include type-x-mandatory;
+        .wrapper {
+          width: 45%;
+          @include align-x-mandatory;
+
+          @include breakpoint-down('medium') {
+            width: 80%;
+          }
+          .card {
+            text-align: center;
+            padding: 1em 2em;
+            img {
+              width: 100px;
+              height: 100px;
+              object-fit: cover;
+              object-position: center;
+              border-radius: $rd-rounded;
+              box-shadow: $outline;
+            }
+            .rating {
+              color: $warning;
+            }
+            .description {
+              .username {
+                h3 {
+                  font-weight: $ft-regular;
+                }
+              }
+              .quote-icon {
+                font-size: $ft-h2;
+              }
+            }
+          }
+        }
+      }
+    }
+    // contact style
+    .contact {
+      .title {
+        text-align: center;
+        margin-bottom: $mb-1;
+        span {
+          font-weight: $ft-s-bold;
+          border-bottom: 4px solid;
+        }
+      }
+      .wrapper {
+        display: flex;
+        justify-content: space-between;
+        gap: 3em;
+        @include breakpoint-down('medium') {
+          flex-direction: column;
+          .card {
+            order: 2;
+          }
+          .form-group {
+            order: 1;
+          }
+        }
+        .card {
+          flex: 1;
+          .card-title {
+            text-align: center;
+            margin-bottom: $mb-1;
+          }
+          .location {
+            padding: 2em;
+            display: flex;
+            flex-direction: column;
+            gap: 1em;
+            border-radius: $rd-10;
+            border: 1.5px solid;
+            @include breakpoint-down('medium') {
+              padding: 1em;
+            }
+            iframe {
+              height: 43.16vh;
+              border: none;
+              border-radius: $rd-10;
+            }
+            .btn-location {
+              @include button-warning;
+              width: $full;
+            }
+          }
+        }
+        .form-group {
+          flex: 1;
+          .form-title {
+            text-align: center;
+            margin-bottom: $mb-1;
+          }
+          .input-section {
+            padding: 2em;
+            display: flex;
+            flex-direction: column;
+            gap: 1em;
+            border-radius: $rd-10;
+            border: 1.5px solid;
+            @include breakpoint-down('medium') {
+              padding: 1em;
+            }
+            input {
+              @include input-primary;
+            }
+            textarea {
+              @include textarea-primary;
+            }
+            .btn-form {
+              @include button-warning;
+              width: $full;
+            }
+          }
+        }
+      }
+    }
+    .accordion {
+      .title {
+        margin-bottom: 0.5em;
+        font-weight: $ft-regular;
+      }
+      .wrapper {
+        .list {
+          border-top: 1px solid;
+          &:last-child {
+            border-bottom: 1px solid;
+          }
+          .btn-accordion {
+            padding: $py-1;
+            display: flex;
+            justify-content: space-between;
+            cursor: pointer;
+            i {
+              margin-left: 0.5em;
+              height: max-content;
+              transition: all 0.3s;
+            }
+          }
+          .panel {
+            padding-bottom: $pb-1;
+            padding-right: $pr-2;
+            display: none;
+            span {
+              font-weight: $ft-regular;
+            }
+          }
+        }
+      }
+    }
+  }
+  // footer style
+  .footer {
+    width: $full;
+    padding: $px-5;
+    padding-top: 2em;
+    margin-top: 6em;
+    color: $default;
+    background: $gradient-primary;
+    @include breakpoint-down('medium') {
+      padding: $px-2;
+      padding-top: 2em;
+    }
+    .wrapper {
+      display: flex;
+      justify-content: space-between;
+      gap: 3em;
+      @include breakpoint-down('medium') {
+        flex-direction: column;
+      }
+      .company-card {
+        flex: 1;
+        .heading {
+          margin-bottom: $mb-2;
+          .logo {
+            i {
+              font-size: $ft-h2;
+            }
+          }
+        }
+        .list {
+          li {
+            &:not(:first-child) {
+              margin-top: 0.5em;
+            }
+            i {
+              width: 25px;
+              height: 25px;
+              text-align: center;
+              line-height: 25px;
+              margin-right: 0.5em;
+            }
+            a {
+              &:hover {
+                color: $secondary;
+              }
+            }
+          }
+        }
+      }
+      .listing {
+        flex: 1;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 3em;
+        .operasional-card {
+          .heading {
+            h4 {
+              width: max-content;
+              margin-bottom: $mb-1;
+              border-bottom: 2px solid;
+            }
+          }
+          .list {
+            li {
+              display: flex;
+              flex-direction: column;
+              &:not(:first-child) {
+                margin-top: $mt-1;
+              }
+              .office-hour {
+                padding-left: $pl-1;
+                color: $secondary;
+              }
+            }
+          }
+        }
+        .service-card {
+          .heading {
+            h4 {
+              width: max-content;
+              margin-bottom: $mb-1;
+              border-bottom: 2px solid;
+            }
+          }
+          .list {
+            li {
+              a {
+                &:hover {
+                  color: $secondary;
+                }
+              }
+            }
+          }
+        }
+        .documentation-card {
+          .heading {
+            h4 {
+              width: max-content;
+              margin-bottom: $mb-1;
+              border-bottom: 2px solid;
+            }
+          }
+          .list {
+            li {
+              a {
+                &:hover {
+                  color: $secondary;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    .copyright {
+      text-align: center;
+      padding: $py-1;
+      margin-top: $mt-2;
+      a {
+        &:hover {
+          color: $secondary;
+        }
+      }
+    }
+  }
+}

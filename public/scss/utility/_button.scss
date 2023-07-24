@@ -1,0 +1,17 @@
+@use '../global/colors' as cr;
+@use '../global/screens' as border;
+
+// button box
+@mixin button-warning {
+  width: max-content;
+  padding: 0.75em 1em;
+  cursor: pointer;
+  border: none;
+  border-radius: border.$rd-10;
+  color: cr.$default;
+  background: cr.$gradient-primary;
+  transition: padding 0.3s;
+  &:hover {
+    padding: 0.75em 1.5em;
+  }
+}

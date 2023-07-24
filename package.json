@@ -1,0 +1,14 @@
+{
+  "name": "company-profile-car-service",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "compile": "sass --watch --no-source-map main.scss style.css && del style.css.map"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "sass": "^1.64.1"
+  }
+}

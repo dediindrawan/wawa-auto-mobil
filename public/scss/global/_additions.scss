@@ -1,0 +1,20 @@
+@use './colors' as cr;
+
+.background-navbar {
+  background: cr.$gradient-primary;
+}
+
+.wrapper-height {
+  height: max-content !important;
+  background: cr.$gradient-primary;
+  transition: transform 0.3s ease-in-out;
+}
+
+.open-navlink {
+  transform: translate(0) !important;
+  transition: transform 0.3s ease-in-out;
+}
+
+.active {
+  color: #38bdf8;
+}

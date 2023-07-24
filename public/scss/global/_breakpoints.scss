@@ -1,0 +1,74 @@
+// // @forward './index';
+
+// // breakpoint size
+// $phone: 640px;
+// $tablet: 768px;
+// $notebook: 1028px;
+// $desktop: 1280px;
+// $tv: 1536px;
+
+// @mixin phone-breakpoint {
+//   @media screen and (max-width: $phone) {
+//     @content;
+//   }
+// }
+
+// @mixin tablet-breakpoint {
+//   @media screen and (min-width: $phone) and (max-width: $tablet) {
+//     @content;
+//   }
+// }
+
+// @mixin notebook-breakpoint {
+//   @media screen and (max-width: $notebook) {
+//     @content;
+//   }
+// }
+
+// @mixin desktop-breakpoint {
+//   @media screen and (max-width: $desktop) {
+//     @content;
+//   }
+// }
+
+// @mixin tv-breakpoint {
+//   @media screen and (max-width: $tv) {
+//     @content;
+//   }
+// }
+
+// $small-max: 576px;
+// $small-min: 576px;
+// $medium-min: 768px;
+
+// @mixin small-max-breakpoint {
+//   @media screen and (max-width: $small-max) {
+//     @content;
+//   }
+// }
+
+// 640px, 1150px, 1400px
+$breakpoints-up: (
+  'medium': '40em',
+  'large': '71.875em',
+  'xlarge': '87.5em',
+);
+
+// 639px, 1149px, 1399px
+$breakpoints-down: (
+  'medium': '39.9375em',
+  'large': '71.8125em',
+  'xlarge': '87.4375em',
+);
+
+@mixin breakpoint($size) {
+  @media screen and (min-width: map-get($breakpoints-up, $size)) {
+    @content;
+  }
+}
+
+@mixin breakpoint-down($size) {
+  @media screen and (max-width: map-get($breakpoints-down, $size)) {
+    @content;
+  }
+}

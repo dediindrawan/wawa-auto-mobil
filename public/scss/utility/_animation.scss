@@ -1,0 +1,85 @@
+// image slide show
+@mixin slide-1 {
+  @keyframes slide-1 {
+    0% {
+      opacity: 1;
+    }
+
+    33% {
+      opacity: 0;
+    }
+
+    66% {
+      opacity: 0;
+    }
+
+    100% {
+      opacity: 0;
+    }
+  }
+}
+
+@mixin slide-2 {
+  @keyframes slide-2 {
+    0% {
+      opacity: 0;
+    }
+
+    33% {
+      opacity: 1;
+    }
+
+    66% {
+      opacity: 0;
+    }
+
+    100% {
+      opacity: 0;
+    }
+  }
+}
+
+@mixin slide-3 {
+  @keyframes slide-3 {
+    0% {
+      opacity: 0;
+    }
+
+    33% {
+      opacity: 0;
+    }
+
+    66% {
+      opacity: 1;
+    }
+
+    100% {
+      opacity: 0;
+    }
+  }
+}
+
+@mixin slide-4 {
+  @keyframes slide-4 {
+    0% {
+      opacity: 0;
+    }
+
+    33% {
+      opacity: 0;
+    }
+
+    66% {
+      opacity: 0;
+    }
+
+    100% {
+      opacity: 1;
+    }
+  }
+}
+
+.rotate-up {
+  transform: rotate(-180deg);
+  transition: transform 0.3s;
+}

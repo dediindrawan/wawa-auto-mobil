@@ -1,0 +1,25 @@
+// import from all variables and components
+@use '../global/additions' as *;
+@use '../global/breakpoints' as *;
+@use '../global/colors' as *;
+@use '../global/fonts' as *;
+@use '../global/presets' as *;
+@use '../global/screens' as *;
+@use '../utility/abstract' as *;
+@use '../utility/animation' as *;
+@use '../utility/button' as *;
+@use '../utility/glasses' as *;
+@use '../utility/input' as *;
+
+// export all variables and components to main.scss
+@forward '../global/additions';
+@forward '../global/breakpoints';
+@forward '../global/colors';
+@forward '../global/fonts';
+@forward '../global/presets';
+@forward '../global/screens';
+@forward '../utility/abstract';
+@forward '../utility/animation';
+@forward '../utility/button';
+@forward '../utility/glasses';
+@forward '../utility/input';

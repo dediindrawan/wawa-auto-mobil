@@ -1,0 +1,98 @@
+@use './colors' as cr;
+@use './fonts' as ft;
+
+// reset default
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+h1 {
+  font-size: ft.$ft-h1;
+  font-weight: ft.$ft-light;
+}
+
+h2 {
+  font-size: ft.$ft-h2;
+  font-weight: ft.$ft-light;
+}
+
+h3 {
+  font-size: ft.$ft-h3;
+  font-weight: ft.$ft-light;
+}
+
+h4 {
+  font-size: ft.$ft-h4;
+  font-weight: ft.$ft-light;
+}
+
+h5 {
+  font-size: ft.$ft-h5;
+  font-weight: ft.$ft-light;
+}
+
+h6 {
+  font-size: ft.$ft-h6;
+  font-weight: ft.$ft-light;
+}
+
+p {
+  font-size: ft.$ft-p-normal;
+}
+
+small {
+  font-size: ft.$ft-small;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  font-size: ft.$ft-p-normal;
+  font-weight: ft.$ft-light;
+  transition: color 0.3s;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+input {
+  font-family: inherit;
+  font-size: ft.$ft-p-normal;
+}
+
+textarea {
+  resize: none;
+  font-family: inherit;
+  font-size: ft.$ft-p-normal;
+}
+
+input:focus,
+textarea:focus {
+  outline: none;
+}
+
+button {
+  font-family: inherit;
+  font-size: ft.$ft-p-normal;
+}
+
+iframe {
+  display: block;
+}
+
+html,
+body {
+  line-height: 1.65;
+  font-style: normal;
+  scroll-behavior: smooth;
+  font-weight: ft.$ft-light;
+  font-family: ft.$ft-primary;
+  color: cr.$primary;
+  background: cr.$default;
+}
