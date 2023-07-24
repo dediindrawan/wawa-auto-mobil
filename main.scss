@@ -31,8 +31,15 @@
       @include breakpoint-down('medium') {
         width: $full;
       }
-      a .brand {
-        color: $default;
+      .logo {
+        width: 125px;
+        height: 60px;
+        margin-left: -0.25em;
+        img {
+          width: $full;
+          height: $full;
+          object-fit: contain;
+        }
       }
       span {
         font-size: $ft-h3;
@@ -145,12 +152,12 @@
         flex-wrap: wrap;
         gap: 1em;
         .btn-hero-explore {
-          @include button-warning;
+          @include button-primary;
           width: 200px;
           background: $gradient-info;
         }
         .btn-hero-schedule {
-          @include button-warning;
+          @include button-primary;
           width: 200px;
           background: $gradient-warning;
         }
@@ -220,6 +227,7 @@
         gap: 3em;
         @include breakpoint-down('medium') {
           margin-right: 0.5em;
+          flex-direction: column;
         }
         .image {
           flex: 1;
@@ -240,13 +248,21 @@
         }
         .description {
           flex: 1;
-          position: relative;
-          &::after {
-            @include abstract;
+          .heading {
+            h3 {
+              font-weight: $ft-s-bold;
+            }
           }
-        }
-        @include breakpoint-down('medium') {
-          flex-direction: column;
+          .caption {
+            position: relative;
+            &::after {
+              @include abstract;
+            }
+          }
+          .btn-profile {
+            margin-top: 0.5em;
+            @include button-primary;
+          }
         }
       }
     }
@@ -423,7 +439,7 @@
               border-radius: $rd-10;
             }
             .btn-location {
-              @include button-warning;
+              @include button-primary;
               width: $full;
             }
           }
@@ -451,7 +467,7 @@
               @include textarea-primary;
             }
             .btn-form {
-              @include button-warning;
+              @include button-primary;
               width: $full;
             }
           }
@@ -516,9 +532,17 @@
         .heading {
           margin-bottom: $mb-2;
           .logo {
-            i {
-              font-size: $ft-h2;
+            width: 225px;
+            height: 60px;
+            margin-left: -0.25em;
+            img {
+              width: $full;
+              height: $full;
+              object-fit: contain;
             }
+          }
+          .title {
+            font-weight: $ft-s-bold;
           }
         }
         .list {

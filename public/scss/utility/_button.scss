@@ -2,7 +2,7 @@
 @use '../global/screens' as border;
 
 // button box
-@mixin button-warning {
+@mixin button-primary {
   width: max-content;
   padding: 0.75em 1em;
   cursor: pointer;

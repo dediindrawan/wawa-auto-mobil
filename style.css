@@ -153,8 +153,15 @@ body {
     width: 100%;
   }
 }
-.container .wrapper-navbar .brand-navbar a .brand {
-  color: #f8fafc;
+.container .wrapper-navbar .brand-navbar .logo {
+  width: 125px;
+  height: 60px;
+  margin-left: -0.25em;
+}
+.container .wrapper-navbar .brand-navbar .logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 }
 .container .wrapper-navbar .brand-navbar span {
   font-size: clamp(1.17rem, 4vw + 1rem, 1.5rem);
@@ -432,6 +439,7 @@ body {
 @media screen and (max-width: 39.9375em) {
   .container .wrapper-section .profile .card {
     margin-right: 0.5em;
+    flex-direction: column;
   }
 }
 .container .wrapper-section .profile .card .image {
@@ -455,9 +463,14 @@ body {
 }
 .container .wrapper-section .profile .card .description {
   flex: 1;
+}
+.container .wrapper-section .profile .card .description .heading h3 {
+  font-weight: 600;
+}
+.container .wrapper-section .profile .card .description .caption {
   position: relative;
 }
-.container .wrapper-section .profile .card .description::after {
+.container .wrapper-section .profile .card .description .caption::after {
   content: "";
   display: block;
   position: absolute;
@@ -465,12 +478,21 @@ body {
   right: 0;
   bottom: 0;
   left: 0;
-  background: linear-gradient(to bottom, rgba(248, 250, 252, 0) 60%, rgba(248, 250, 252, 0.8) 100%);
+  background: linear-gradient(to bottom, rgba(248, 250, 252, 0) 35%, rgba(248, 250, 252, 0.9) 100%);
 }
-@media screen and (max-width: 39.9375em) {
-  .container .wrapper-section .profile .card {
-    flex-direction: column;
-  }
+.container .wrapper-section .profile .card .description .btn-profile {
+  margin-top: 0.5em;
+  width: max-content;
+  padding: 0.75em 1em;
+  cursor: pointer;
+  border: none;
+  border-radius: 10px;
+  color: #f8fafc;
+  background: linear-gradient(to top right, #0f172a, #475569);
+  transition: padding 0.3s;
+}
+.container .wrapper-section .profile .card .description .btn-profile:hover {
+  padding: 0.75em 1.5em;
 }
 .container .wrapper-section .service .title {
   text-align: end;
@@ -545,7 +567,7 @@ body {
   right: 0;
   bottom: 0;
   left: 0;
-  background: linear-gradient(to bottom, rgba(248, 250, 252, 0) 60%, rgba(248, 250, 252, 0.8) 100%);
+  background: linear-gradient(to bottom, rgba(248, 250, 252, 0) 35%, rgba(248, 250, 252, 0.9) 100%);
 }
 .container .wrapper-section .service .card .description .heading h3 {
   font-weight: 600;
@@ -781,8 +803,18 @@ body {
 .container .footer .wrapper .company-card .heading {
   margin-bottom: 2em;
 }
-.container .footer .wrapper .company-card .heading .logo i {
-  font-size: clamp(1.5rem, 4vw + 1rem, 2.25rem);
+.container .footer .wrapper .company-card .heading .logo {
+  width: 225px;
+  height: 60px;
+  margin-left: -0.25em;
+}
+.container .footer .wrapper .company-card .heading .logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.container .footer .wrapper .company-card .heading .title {
+  font-weight: 600;
 }
 .container .footer .wrapper .company-card .list li:not(:first-child) {
   margin-top: 0.5em;
