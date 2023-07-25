@@ -12,30 +12,45 @@ window.addEventListener('scroll', function () {
     };
 });
 
-const toggleMenu = document.querySelector('.toggle-menu');
-const navLink = document.querySelector('.nav-link');
+// toggle menu to open navbar
+function toggleMenu() {
+    const navLink = document.querySelector('.nav-link');
 
-toggleMenu.addEventListener('click', () => {
     navLink.classList.toggle('open-navlink');
     wrapperNavbar.classList.toggle('wrapper-height');
-});
+};
 
-
-const btnExplore = document.querySelector('.btn-hero-explore');
-btnExplore.addEventListener('click', () => {
+function btnExplore() {
     window.location.href = '#triger-card';
-});
+};
 
-const btnSchedule = document.querySelector('.btn-hero-schedule');
-btnSchedule.addEventListener('click', () => {
+function btnSchedule() {
     window.location.href = '#contact';
-});
+};
 
 function btnLocation() {
     window.location.href = 'https://goo.gl/maps/jEcaYjfJsBp2kjxK6';
 };
 
-// frequently ask question
+// package list accordion
+const btnPackage = document.querySelectorAll('.btn-package');
+btnPackage.forEach(packages => {
+    packages.addEventListener('click', () => {
+        const panel = packages.nextElementSibling;
+        const icon = packages.children;
+        const icons = icon[0];
+
+        if (panel.style.display === 'block') {
+            panel.style.display = 'none';
+            icons.classList.remove('rotate-up');
+        } else {
+            panel.style.display = 'block';
+            icons.classList.add('rotate-up');
+        };
+    });
+});
+
+// frequently ask question accordion
 const btnAccordion = document.querySelectorAll('.btn-accordion');
 btnAccordion.forEach(accordions => {
     accordions.addEventListener('click', () => {

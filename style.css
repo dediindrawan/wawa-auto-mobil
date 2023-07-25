@@ -367,6 +367,63 @@ body {
 .container .hero-image .hero-text .button-group .btn-hero-schedule:hover {
   padding: 0.75em 1.5em;
 }
+.container .banner-image {
+  width: 100%;
+  display: flex;
+  position: relative;
+}
+.container .banner-image .image {
+  width: 100%;
+  height: 250px;
+  position: absolute;
+}
+.container .banner-image .image::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(to top right, #0f172a, rgba(15, 23, 42, 0.4), #0f172a);
+}
+.container .banner-image .image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.container .banner-image .banner-text {
+  width: 100%;
+  height: 250px;
+  padding: 0 2em;
+  text-align: center;
+  position: inherit;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: #f8fafc;
+}
+.container .banner-image .banner-text .title {
+  text-transform: capitalize;
+  font-weight: 600;
+}
+.container .banner-image .banner-text .breadcrumb {
+  display: flex;
+  gap: 1em;
+}
+.container .banner-image .banner-text .breadcrumb li:last-child a {
+  color: #38bdf8;
+}
+.container .banner-image .banner-text .breadcrumb li:last-child a:hover {
+  color: #38bdf8;
+}
+.container .banner-image .banner-text .breadcrumb li a {
+  color: #cbd5e1;
+}
+.container .banner-image .banner-text .breadcrumb li a:hover {
+  color: #f8fafc;
+}
 .container .header-card {
   width: 100%;
   padding: 0 5em;
@@ -557,17 +614,6 @@ body {
 }
 .container .wrapper-section .service .card .description {
   flex: 1;
-  position: relative;
-}
-.container .wrapper-section .service .card .description::after {
-  content: "";
-  display: block;
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  background: linear-gradient(to bottom, rgba(248, 250, 252, 0) 35%, rgba(248, 250, 252, 0.9) 100%);
 }
 .container .wrapper-section .service .card .description .heading h3 {
   font-weight: 600;
@@ -580,6 +626,69 @@ body {
     flex-direction: column;
     margin-top: 2em;
   }
+}
+.container .wrapper-section .service .btn-service {
+  margin-top: 5em;
+  text-align: center;
+}
+.container .wrapper-section .service .btn-service a {
+  width: max-content;
+  padding: 0.75em 1em;
+  cursor: pointer;
+  border: none;
+  border-radius: 10px;
+  color: #f8fafc;
+  background: linear-gradient(to top right, #0f172a, #475569);
+  transition: padding 0.3s;
+}
+.container .wrapper-section .service .btn-service a:hover {
+  padding: 0.75em 1.5em;
+}
+@media screen and (max-width: 39.9375em) {
+  .container .wrapper-section .service .btn-service {
+    margin-top: 2em;
+  }
+}
+.container .wrapper-section .service .package:not(:first-child) {
+  margin-top: 4em;
+}
+.container .wrapper-section .service .package .title {
+  margin-bottom: 0.5em;
+  font-weight: 400;
+  text-align: start;
+}
+.container .wrapper-section .service .package .wrapper .list {
+  border-top: 1px solid;
+}
+.container .wrapper-section .service .package .wrapper .list:last-child {
+  border-bottom: 1px solid;
+}
+.container .wrapper-section .service .package .wrapper .list .btn-package {
+  padding: 1em 0;
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+  font-weight: 400;
+}
+.container .wrapper-section .service .package .wrapper .list .btn-package i {
+  margin-left: 0.5em;
+  height: max-content;
+  transition: all 0.3s;
+}
+.container .wrapper-section .service .package .wrapper .list .panel {
+  padding-bottom: 1em;
+  display: none;
+}
+.container .wrapper-section .service .package .wrapper .list .panel li {
+  padding-right: 2em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1em;
+  transition: all 0.3s;
+}
+.container .wrapper-section .service .package .wrapper .list .panel li:hover {
+  background: #cbd5e1;
 }
 .container .wrapper-section .testimoni .title {
   margin-bottom: 1em;

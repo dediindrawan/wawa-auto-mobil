@@ -164,6 +164,68 @@
       }
     }
   }
+  // banner
+  .banner-image {
+    width: $full;
+    display: flex;
+    position: relative;
+    .image {
+      width: $full;
+      height: 250px;
+      position: absolute;
+      &::after {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background: $gradient-dark;
+      }
+      img {
+        width: $full;
+        height: $full;
+        object-fit: cover;
+      }
+    }
+    .banner-text {
+      width: $full;
+      height: 250px;
+      padding: $px-2;
+      text-align: center;
+      position: inherit;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      color: $default;
+      .title {
+        text-transform: capitalize;
+        font-weight: $ft-s-bold;
+      }
+      .breadcrumb {
+        display: flex;
+        gap: 1em;
+        li {
+          &:last-child {
+            a {
+              color: #38bdf8;
+              &:hover {
+                color: #38bdf8;
+              }
+            }
+          }
+          a {
+            color: $secondary;
+            &:hover {
+              color: $default;
+            }
+          }
+        }
+      }
+    }
+  }
   // header card style
   .header-card {
     width: $full;
@@ -326,10 +388,6 @@
         }
         .description {
           flex: 1;
-          position: relative;
-          &::after {
-            @include abstract;
-          }
           .heading {
             h3 {
               font-weight: $ft-s-bold;
@@ -342,6 +400,61 @@
         @include breakpoint-down('medium') {
           flex-direction: column;
           margin-top: $mt-2;
+        }
+      }
+      .btn-service {
+        margin-top: $mt-5;
+        text-align: center;
+        a {
+          @include button-primary;
+        }
+        @include breakpoint-down('medium') {
+          margin-top: $mt-2;
+        }
+      }
+      .package {
+        &:not(:first-child) {
+          margin-top: $mt-4;
+        }
+        .title {
+          margin-bottom: 0.5em;
+          font-weight: $ft-regular;
+          text-align: start;
+        }
+        .wrapper {
+          .list {
+            border-top: 1px solid;
+            &:last-child {
+              border-bottom: 1px solid;
+            }
+            .btn-package {
+              padding: $py-1;
+              display: flex;
+              justify-content: space-between;
+              cursor: pointer;
+              font-weight: $ft-regular;
+              i {
+                margin-left: 0.5em;
+                height: max-content;
+                transition: all 0.3s;
+              }
+            }
+            .panel {
+              padding-bottom: $pb-1;
+              display: none;
+              li {
+                padding-right: $pr-2;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                gap: 1em;
+                transition: all 0.3s;
+                &:hover {
+                  background: $secondary;
+                }
+              }
+            }
+          }
         }
       }
     }

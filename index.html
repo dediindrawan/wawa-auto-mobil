@@ -20,21 +20,21 @@
 
 <body>
     <!-- container start -->
-    <div class="container">
+    <div class="container" id="home">
         <!-- wrapper navbar -->
         <nav class="wrapper-navbar">
             <div class="brand-navbar">
-                <a href="#" class="logo">
+                <a href="#home" class="logo">
                     <img src="./public/assets/LogoWawaAutoMobil.png" alt="logo">
                 </a>
 
-                <span class="toggle-menu">
+                <span class="toggle-menu" onclick="toggleMenu()">
                     <i class="fa-solid fa-bars"></i>
                 </span>
             </div>
 
             <ul class="nav-link">
-                <a href="#">
+                <a href="#home">
                     <li class="active">Beranda</li>
                 </a>
                 <a href="#profile">
@@ -70,15 +70,16 @@
                 <img src="https://images.unsplash.com/photo-1625047509248-ec889cbff17f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1032&q=80"
                     alt="image">
             </figure>
-            <blockquote class="hero-text">
+            <div class="hero-text">
                 <h1 class="title">Wawa Auto Mobil</h1>
                 <p class="description">Servis Mobil Dengan Harga Terbaik Dan Hasil Yang Memuaskan</p>
                 <div class="button-group">
-                    <button type="submit" class="btn-hero-explore"><i class="fa-solid fa-car-side"
+                    <button type="submit" class="btn-hero-explore" onclick="btnExplore()"><i class="fa-solid fa-car-side"
                             style="margin-right: .5em;"></i>Jelajahi</button>
-                    <button type="submit" class="btn-hero-schedule"><i class="fa-solid fa-file-signature"
+                    <button type="submit" class="btn-hero-schedule" onclick="btnSchedule()"><i class="fa-solid fa-file-signature"
                             style="margin-right: .5em;"></i>Buat Jadwal</button>
                 </div>
+            </div>
         </header>
 
         <!-- header card -->
@@ -205,6 +206,9 @@
                             consequatur non nesciunt error dicta voluptatibus quaerat fugit?
                         </figcaption>
                     </figure>
+                    <div class="btn-service">
+                        <a href="./public/pages/service.html">Lihat Semua Layanan</a>
+                    </div>
                 </article>
             </section>
 
