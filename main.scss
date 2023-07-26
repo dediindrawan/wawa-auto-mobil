@@ -144,6 +144,7 @@
         font-weight: $ft-s-bold;
         background: $gradient-danger;
         background-clip: text;
+        -webkit-background-clip: text;
         color: transparent;
         filter: drop-shadow(0 0 1px #000);
       }
@@ -669,6 +670,7 @@
             font-family: $ft-secondary;
             background: $gradient-danger;
             background-clip: text;
+            -webkit-background-clip: text;
             color: transparent;
             filter: drop-shadow(0 0 1px #000);
           }

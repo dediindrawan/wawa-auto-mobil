@@ -330,6 +330,7 @@ body {
   font-weight: 600;
   background: linear-gradient(to top right, #770101, #da7e7e);
   background-clip: text;
+  -webkit-background-clip: text;
   color: transparent;
   filter: drop-shadow(0 0 1px #000);
 }
@@ -938,6 +939,7 @@ body {
   font-family: "Days One", sans-serif;
   background: linear-gradient(to top right, #770101, #da7e7e);
   background-clip: text;
+  -webkit-background-clip: text;
   color: transparent;
   filter: drop-shadow(0 0 1px #000);
 }
