@@ -1,24 +1,25 @@
-<!-- <?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
-        <loc>https://www.contohwebsite.com/</loc>
-        <lastmod>2023-07-20</lastmod>
+        <loc>https://dediindrawan.github.io/wawa-auto-mobil/</loc>
+        <lastmod>2023-07-26</lastmod>
         <changefreq>daily</changefreq>
         <priority>1.0</priority>
     </url>
     <url>
-        <loc>https://www.contohwebsite.com/about.html</loc>
-        <lastmod>2023-07-18</lastmod>
+        <loc>https://dediindrawan.github.io/wawa-auto-mobil/pages/profile.html</loc>
+        <lastmod>2023-07-26</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://www.contohwebsite.com/contact.html</loc>
-        <lastmod>2023-07-15</lastmod>
+        <loc>https://dediindrawan.github.io/wawa-auto-mobil/pages/service.html</loc>
+        <lastmod>2023-07-26</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.6</priority>
     </url>
     <!-- Tambahkan URL lainnya sesuai dengan struktur website Anda -->
 </urlset>
 
-Sitemap: https://www.contohwebsite.com/sitemap.xml
+
+Sitemap: https://dediindrawan.github.io/wawa-auto-mobil/sitemap.xml

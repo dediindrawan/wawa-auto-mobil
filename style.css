@@ -979,12 +979,12 @@ body {
   padding-left: 1em;
   color: #cbd5e1;
 }
-.container .footer .wrapper .listing .service-card .heading h4 {
+.container .footer .wrapper .listing .blog-card .heading h4 {
   width: max-content;
   margin-bottom: 1em;
   border-bottom: 2px solid;
 }
-.container .footer .wrapper .listing .service-card .list li a:hover {
+.container .footer .wrapper .listing .blog-card .list li a:hover {
   color: #cbd5e1;
 }
 .container .footer .wrapper .listing .documentation-card .heading h4 {
