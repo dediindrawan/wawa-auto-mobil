@@ -1,4 +1,5 @@
 @use './colors' as cr;
+@use './screens' as border;
 
 .background-navbar {
   background: cr.$gradient-primary;
@@ -11,7 +12,7 @@
 }
 
 .open-navlink {
-  transform: translate(0) !important;
+  transform: translateX(0) !important;
   transition: transform 0.3s ease-in-out;
 }
 

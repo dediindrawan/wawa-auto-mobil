@@ -11,7 +11,7 @@
 }
 
 .open-navlink {
-  transform: translate(0) !important;
+  transform: translateX(0) !important;
   transition: transform 0.3s ease-in-out;
 }
 
@@ -184,7 +184,7 @@ body {
   .container .wrapper-navbar .nav-link {
     width: 100%;
     flex-direction: column;
-    transform: translate(-100%);
+    transform: translateX(-100%);
     transition: transform 0.3s ease-in-out;
   }
 }
