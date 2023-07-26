@@ -690,6 +690,12 @@ body {
 .container .wrapper-section .service .package .wrapper .list .panel li:hover {
   background: #cbd5e1;
 }
+.container .wrapper-section .service .package .wrapper .list .panel li .product {
+  flex: 1.5;
+}
+.container .wrapper-section .service .package .wrapper .list .panel li .price {
+  flex: 0.5;
+}
 .container .wrapper-section .testimoni .title {
   margin-bottom: 1em;
 }

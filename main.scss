@@ -452,6 +452,12 @@
                 &:hover {
                   background: $secondary;
                 }
+                .product {
+                  flex: 1.5;
+                }
+                .price {
+                  flex: 0.5;
+                }
               }
             }
           }
