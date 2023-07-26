@@ -327,12 +327,6 @@ body {
 }
 .container .hero-image .hero-text .title {
   font-family: "Days One", sans-serif;
-  font-weight: 600;
-  background: linear-gradient(to top right, #770101, #da7e7e);
-  background-clip: text;
-  -webkit-background-clip: text;
-  color: transparent;
-  filter: drop-shadow(0 0 1px #000);
 }
 .container .hero-image .hero-text .description {
   font-size: clamp(1.5rem, 4vw - 1rem, 1.75rem);
@@ -937,11 +931,6 @@ body {
 }
 .container .footer .wrapper .company-card .heading .title {
   font-family: "Days One", sans-serif;
-  background: linear-gradient(to top right, #770101, #da7e7e);
-  background-clip: text;
-  -webkit-background-clip: text;
-  color: transparent;
-  filter: drop-shadow(0 0 1px #000);
 }
 .container .footer .wrapper .company-card .list li:not(:first-child) {
   margin-top: 0.5em;
