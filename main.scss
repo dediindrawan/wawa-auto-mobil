@@ -140,7 +140,12 @@
       flex-direction: column;
       color: $default;
       .title {
+        font-family: $ft-secondary;
         font-weight: $ft-s-bold;
+        background: $gradient-danger;
+        background-clip: text;
+        color: transparent;
+        filter: drop-shadow(0 0 1px #000);
       }
       .description {
         font-size: $ft-p-special;
@@ -661,7 +666,11 @@
             }
           }
           .title {
-            font-weight: $ft-s-bold;
+            font-family: $ft-secondary;
+            background: $gradient-danger;
+            background-clip: text;
+            color: transparent;
+            filter: drop-shadow(0 0 1px #000);
           }
         }
         .list {
