@@ -1,7 +1,6 @@
 // change background color on navbar when the window on scrolling
 const lastScrollTop = 0;
 const wrapperNavbar = document.querySelector('.wrapper-navbar');
-
 window.addEventListener('scroll', function () {
     const scrollTop = window.scrollY || document.documentElement.scrollTop;
 
@@ -12,8 +11,8 @@ window.addEventListener('scroll', function () {
     };
 });
 
+// add class active on navigation menu
 const navLinkList = document.querySelectorAll('.nav-link li');
-
 navLinkList.forEach(nav => {
     nav.addEventListener('click', () => {
         // Remove 'active' class from all navigation elements
@@ -22,96 +21,29 @@ navLinkList.forEach(nav => {
                 otherNav.classList.remove('active');
             }
         });
-
         // Add 'active' class to the clicked navigation element
         if (!nav.classList.contains('active')) {
             nav.classList.add('active');
+            // console.log(nav)
         }
     });
 });
 
-
-// click outside without close menu automatically
-// const navLinkContent = document.getElementById('nav-link-content');
-// const toggleMenuButton = document.querySelector('.toggle-menu');
-// let isMenuOpen = false;
-
-// function toggleMenu() {
-//     navLinkContent.classList.toggle('open-navlink');
-//     wrapperNavbar.classList.toggle('wrapper-height');
-//     isMenuOpen = navLinkContent.classList.contains('open-navlink');
-// }
-
-// // Event listener untuk tombol toggle-menu
-// toggleMenuButton.addEventListener('click', (event) => {
-//     event.stopPropagation(); // Menghentikan penanganan klik lebih lanjut, karena akan ditangani oleh event mousedown
-//     toggleMenu();
-// });
-
-// // Event listener untuk menutup menu saat klik di luar elemen menu atau tombol toggle-menu
-// document.addEventListener('mousedown', (event) => {
-//     const targetElement = event.target;
-//     const isClickInsideMenu = navLinkContent.contains(targetElement);
-//     const isClickToggleMenuButton = targetElement.classList.contains('toggle-menu');
-//     const isActiveNavItem = targetElement.closest('.nav-link > li.active');
-
-//     // Jika klik dilakukan di luar elemen menu dan bukan di tombol toggle-menu atau elemen 'active'
-//     if (!isClickInsideMenu && !isClickToggleMenuButton && !isActiveNavItem) {
-//         if (isMenuOpen) {
-//             toggleMenu();
-//         }
-//     }
-// });
-
-
-
-// click outside with close menu automatically
-const navLinkContent = document.getElementById('nav-link-content');
-const toggleMenuButton = document.querySelector('.toggle-menu');
-let isMenuOpen = false;
-
-function toggleMenu() {
-    navLinkContent.classList.toggle('open-navlink');
+// create function to open navigation menu when toggle menu onclick
+const toggleMenu = document.querySelector('.toggle-menu');
+const navLink = document.querySelector('.nav-link');
+// clicking on toggle menu to open and close navigation menu
+toggleMenu.onclick = function () {
+    navLink.classList.toggle('open-navlink');
     wrapperNavbar.classList.toggle('wrapper-height');
-    isMenuOpen = navLinkContent.classList.contains('open-navlink');
-}
-
-// Event listener untuk tombol toggle-menu
-toggleMenuButton.addEventListener('click', () => {
-    toggleMenu();
-});
-
-// Event listener untuk menutup menu saat klik di luar elemen menu atau tombol toggle-menu
-document.addEventListener('mousedown', (event) => {
-    const targetElement = event.target;
-    const isClickInsideMenu = navLinkContent.contains(targetElement);
-    const isClickToggleMenuButton = targetElement.classList.contains('toggle-menu');
-    const isActiveNavItem = targetElement.closest('.nav-link > li.active');
-
-    // Jika klik dilakukan di luar elemen menu dan bukan di tombol toggle-menu atau elemen 'active'
-    if (!isClickInsideMenu && !isClickToggleMenuButton && !isActiveNavItem) {
-        if (isMenuOpen) {
-            toggleMenu();
-        }
-    }
-});
-
-// Event listener untuk menutup menu saat salah satu menu di dalamnya diklik
-const navLinkItems = document.querySelectorAll('.nav-link > a');
-navLinkItems.forEach(item => {
-    item.addEventListener('click', () => {
-        if (isMenuOpen) {
-            toggleMenu();
-        }
-    });
-});
-
-
-
-
-
-
-
+};
+// click outside to close navigation menu with or without click toggle menu
+document.onclick = function (e) {
+    if (!toggleMenu.contains(e.target) && !navLink.contains(e.target)) {
+        navLink.classList.remove('open-navlink');
+        wrapperNavbar.classList.remove('wrapper-height');
+    };
+};
 
 function btnExplore() {
     window.location.href = '#triger-card';
