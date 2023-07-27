@@ -32,16 +32,28 @@ navLinkList.forEach(nav => {
 // create function to open navigation menu when toggle menu onclick
 const toggleMenu = document.querySelector('.toggle-menu');
 const navLink = document.querySelector('.nav-link');
+const containerOverlay = document.querySelector('.container');
 // clicking on toggle menu to open and close navigation menu
 toggleMenu.onclick = function () {
     navLink.classList.toggle('open-navlink');
     wrapperNavbar.classList.toggle('wrapper-height');
+    containerOverlay.classList.toggle('overlay');
+    if (navLink.classList.contains('open-navlink') && wrapperNavbar.classList.contains('wrapper-height')) {
+        document.querySelector('.toggle-open').style.display = 'none';
+        document.querySelector('.toggle-close').style.display = 'block';
+    } else {
+        document.querySelector('.toggle-open').style.display = 'block';
+        document.querySelector('.toggle-close').style.display = 'none';
+    }
 };
 // click outside to close navigation menu with or without click toggle menu
 document.onclick = function (e) {
     if (!toggleMenu.contains(e.target) && !navLink.contains(e.target)) {
         navLink.classList.remove('open-navlink');
         wrapperNavbar.classList.remove('wrapper-height');
+        containerOverlay.classList.remove('overlay');
+        document.querySelector('.toggle-open').style.display = 'block';
+        document.querySelector('.toggle-close').style.display = 'none';
     };
 };
 

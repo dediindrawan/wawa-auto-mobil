@@ -28,6 +28,7 @@
     .brand-navbar {
       display: flex;
       justify-content: space-between;
+      align-items: center;
       @include breakpoint-down('medium') {
         width: $full;
       }
@@ -41,13 +42,20 @@
           object-fit: contain;
         }
       }
-      span {
+      .toggle-menu {
         font-size: $ft-h3;
         color: $default;
         cursor: pointer;
         display: none;
         @include breakpoint-down('medium') {
           display: block;
+          height: max-content;
+          .toggle-open {
+            display: block;
+          }
+          .toggle-close {
+            display: none;
+          }
         }
       }
     }
@@ -76,10 +84,15 @@
           justify-content: start;
         }
         li {
+          flex: 1;
+          height: 60px;
           display: flex;
           justify-content: center;
           align-items: center;
           flex-direction: column;
+          @include breakpoint-down('medium') {
+            align-items: start;
+          }
         }
       }
     }
