@@ -1,11 +1,11 @@
 // import all variable
 @use './public/scss/global/index' as *;
 
-// container style
+// container block style
 .container {
   width: $full;
   position: relative;
-  // wrapper navbar style
+  // wrapper navbar block style
   .wrapper-navbar {
     height: 60px;
     padding: $px-5;
@@ -97,7 +97,7 @@
       }
     }
   }
-  // hero section style
+  // hero image block style
   .hero-image {
     width: $full;
     display: flex;
@@ -154,11 +154,6 @@
       color: $default;
       .title {
         font-family: $ft-secondary;
-        // background: $gradient-danger;
-        // background-clip: text;
-        // -webkit-background-clip: text;
-        // color: transparent;
-        // filter: drop-shadow(0 0 1px #000);
       }
       .description {
         font-size: $ft-p-special;
@@ -174,7 +169,7 @@
           width: 200px;
           background: $gradient-info;
         }
-        .btn-hero-schedule {
+        .btn-hero-contact {
           @include button-primary;
           width: 200px;
           background: $gradient-warning;
@@ -182,7 +177,7 @@
       }
     }
   }
-  // banner
+  // banner image block style
   .banner-image {
     width: $full;
     display: flex;
@@ -244,8 +239,8 @@
       }
     }
   }
-  // header card style
-  .header-card {
+  // header card block style
+  .headline-card {
     width: $full;
     padding: $px-5;
     display: flex;
@@ -277,18 +272,18 @@
       }
     }
   }
-  // wrapper section style
+  // wrapper section block style
   .wrapper-section {
     width: $full;
     padding: $px-5;
     @include breakpoint-down('medium') {
       padding: $px-2;
     }
-    // reset section
+    // reset all padding top of section
     section {
       padding-top: $pt-4;
     }
-    // profile info style
+    // profile block style
     .profile {
       .title {
         margin-bottom: $mb-1;
@@ -326,14 +321,14 @@
             transform: $translate-down;
           }
         }
-        .description {
+        .caption {
           flex: 1;
-          .heading {
+          .subtitle {
             h3 {
               font-weight: $ft-s-bold;
             }
           }
-          .caption {
+          .description {
             position: relative;
             &::after {
               @include abstract;
@@ -346,7 +341,7 @@
         }
       }
     }
-    // service info style
+    // service block style
     .service {
       .title {
         text-align: end;
@@ -368,7 +363,7 @@
           .image {
             order: 2;
           }
-          .description {
+          .caption {
             order: 1;
           }
         }
@@ -379,7 +374,7 @@
             .image {
               order: 1;
             }
-            .description {
+            .caption {
               order: 2;
             }
           }
@@ -404,9 +399,9 @@
             }
           }
         }
-        .description {
+        .caption {
           flex: 1;
-          .heading {
+          .subtitle {
             h3 {
               font-weight: $ft-s-bold;
               i {
@@ -517,7 +512,7 @@
             .rating {
               color: $warning;
             }
-            .description {
+            .caption {
               .username {
                 h3 {
                   font-weight: $ft-regular;
@@ -531,7 +526,7 @@
         }
       }
     }
-    // contact style
+    // contact block style
     .contact {
       .title {
         text-align: center;
@@ -547,20 +542,20 @@
         gap: 3em;
         @include breakpoint-down('medium') {
           flex-direction: column;
-          .card {
+          .location {
             order: 2;
           }
           .form-group {
             order: 1;
           }
         }
-        .card {
+        .location {
           flex: 1;
-          .card-title {
+          .subtitle {
             text-align: center;
             margin-bottom: $mb-1;
           }
-          .location {
+          .map-direction {
             padding: 2em;
             display: flex;
             flex-direction: column;
@@ -575,7 +570,7 @@
               border: none;
               border-radius: $rd-10;
             }
-            .btn-location {
+            .btn-direction {
               @include button-primary;
               width: $full;
             }
@@ -583,7 +578,7 @@
         }
         .form-group {
           flex: 1;
-          .form-title {
+          .subtitle {
             text-align: center;
             margin-bottom: $mb-1;
           }
@@ -603,7 +598,7 @@
             textarea {
               @include textarea-primary;
             }
-            .btn-form {
+            .btn-send-message {
               @include button-primary;
               width: $full;
             }
@@ -611,7 +606,8 @@
         }
       }
     }
-    .accordion {
+    // frequently ask question block style
+    .frequently-ask-question {
       .title {
         margin-bottom: 0.5em;
         font-weight: $ft-regular;
@@ -622,7 +618,7 @@
           &:last-child {
             border-bottom: 1px solid;
           }
-          .btn-accordion {
+          .btn-faq {
             padding: $py-1;
             display: flex;
             justify-content: space-between;
@@ -633,7 +629,7 @@
               transition: all 0.3s;
             }
           }
-          .panel {
+          .description {
             padding-bottom: $pb-1;
             padding-right: $pr-2;
             display: none;
@@ -645,7 +641,7 @@
       }
     }
   }
-  // footer style
+  // footer block style
   .footer {
     width: $full;
     padding: $px-5;
@@ -666,7 +662,7 @@
       }
       .company-card {
         flex: 1;
-        .heading {
+        .header {
           margin-bottom: $mb-2;
           .logo {
             width: 225px;
@@ -680,11 +676,6 @@
           }
           .title {
             font-family: $ft-secondary;
-            // background: $gradient-danger;
-            // background-clip: text;
-            // -webkit-background-clip: text;
-            // color: transparent;
-            // filter: drop-shadow(0 0 1px #000);
           }
         }
         .list {
@@ -707,14 +698,14 @@
           }
         }
       }
-      .listing {
+      .list-information {
         flex: 1;
         display: flex;
         justify-content: space-between;
         flex-wrap: wrap;
         gap: 3em;
         .operasional-card {
-          .heading {
+          .header {
             h4 {
               width: max-content;
               margin-bottom: $mb-1;
@@ -728,7 +719,7 @@
               &:not(:first-child) {
                 margin-top: $mt-1;
               }
-              .office-hour {
+              .operasional {
                 padding-left: $pl-1;
                 color: $secondary;
               }
@@ -736,7 +727,7 @@
           }
         }
         .blog-card {
-          .heading {
+          .header {
             h4 {
               width: max-content;
               margin-bottom: $mb-1;
@@ -754,7 +745,7 @@
           }
         }
         .documentation-card {
-          .heading {
+          .header {
             h4 {
               width: max-content;
               margin-bottom: $mb-1;

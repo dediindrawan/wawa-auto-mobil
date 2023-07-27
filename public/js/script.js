@@ -3,7 +3,7 @@ const lastScrollTop = 0;
 const wrapperNavbar = document.querySelector('.wrapper-navbar');
 window.addEventListener('scroll', function () {
     const scrollTop = window.scrollY || document.documentElement.scrollTop;
-
+    // if wrapper navbar not on the top of browser window
     if (scrollTop !== lastScrollTop) {
         wrapperNavbar.classList.add('background-navbar');
     } else {
@@ -24,7 +24,6 @@ navLinkList.forEach(nav => {
         // Add 'active' class to the clicked navigation element
         if (!nav.classList.contains('active')) {
             nav.classList.add('active');
-            // console.log(nav)
         }
     });
 });
@@ -33,11 +32,12 @@ navLinkList.forEach(nav => {
 const toggleMenu = document.querySelector('.toggle-menu');
 const navLink = document.querySelector('.nav-link');
 const containerOverlay = document.querySelector('.container');
-// clicking on toggle menu to open and close navigation menu
+// clicking on the toggle menu icon to open and close navigation menu
 toggleMenu.onclick = function () {
     navLink.classList.toggle('open-navlink');
     wrapperNavbar.classList.toggle('wrapper-height');
     containerOverlay.classList.toggle('overlay');
+    // change icon if navigation menu is open or close
     if (navLink.classList.contains('open-navlink') && wrapperNavbar.classList.contains('wrapper-height')) {
         document.querySelector('.toggle-open').style.display = 'none';
         document.querySelector('.toggle-close').style.display = 'block';
@@ -46,7 +46,7 @@ toggleMenu.onclick = function () {
         document.querySelector('.toggle-close').style.display = 'none';
     }
 };
-// click outside to close navigation menu with or without click toggle menu
+// click the outside to close navigation menu with or without clicking toggle menu icon
 document.onclick = function (e) {
     if (!toggleMenu.contains(e.target) && !navLink.contains(e.target)) {
         navLink.classList.remove('open-navlink');
@@ -57,15 +57,18 @@ document.onclick = function (e) {
     };
 };
 
-function btnExplore() {
-    window.location.href = '#triger-card';
+// btn hero explore function
+function btnHeroExplore() {
+    window.location.href = '#middle-line-card';
 };
 
-function btnSchedule() {
+// btn hero contact function
+function btnHeroContact() {
     window.location.href = '#contact';
 };
 
-function btnLocation() {
+// btn direction function
+function btnDirection() {
     window.location.href = 'https://goo.gl/maps/jEcaYjfJsBp2kjxK6';
 };
 
@@ -88,19 +91,19 @@ btnPackage.forEach(packages => {
 });
 
 // frequently ask question accordion
-const btnAccordion = document.querySelectorAll('.btn-accordion');
-btnAccordion.forEach(accordions => {
-    accordions.addEventListener('click', () => {
-        const panel = accordions.nextElementSibling;
-        const icon = accordions.children;
-        const icons = icon[0];
+const btnFaq = document.querySelectorAll('.btn-faq');
+btnFaq.forEach(faq => {
+    faq.addEventListener('click', () => {
+        const description = faq.nextElementSibling;
+        const icons = faq.children;
+        const icon = icons[0];
 
-        if (panel.style.display === 'block') {
-            panel.style.display = 'none';
-            icons.classList.remove('rotate-up');
+        if (description.style.display === 'block') {
+            description.style.display = 'none';
+            icon.classList.remove('rotate-up');
         } else {
-            panel.style.display = 'block';
-            icons.classList.add('rotate-up');
+            description.style.display = 'block';
+            icon.classList.add('rotate-up');
         };
     });
 });
@@ -108,7 +111,5 @@ btnAccordion.forEach(accordions => {
 // set update year of copyright automatically
 let copyYear = document.querySelector('.copy-year'),
     date = new Date(), year;
-
 year = date.getFullYear();
-
 copyYear.textContent = `${year}`;

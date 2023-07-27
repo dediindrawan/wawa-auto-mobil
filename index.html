@@ -12,6 +12,9 @@
     <meta name="author" content="Dedi Indrawan">
     <meta name="robots" content="index, follow">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- favicon -->
+    <link rel="icon" href="../public/assets/IconWawaAutoMobil.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="../public/assets/IconWawaAutoMobil.ico" type="image/x-icon">
     <!-- connecting to css file -->
     <link rel="stylesheet" href="style.css">
     <!-- import cdn font awesome icon -->
@@ -21,19 +24,21 @@
 <body>
     <!-- container start -->
     <div class="container" id="home">
-        <!-- wrapper navbar -->
+        <!-- wrapper navbar start -->
         <nav class="wrapper-navbar">
+            <!-- brand navbar -->
             <div class="brand-navbar">
                 <a href="#home" class="logo">
                     <img src="./public/assets/LogoWawaAutoMobil.png" alt="logo">
                 </a>
-
+                <!-- toggle menu -->
                 <span class="toggle-menu">
                     <i class="fa-solid fa-bars toggle-open"></i>
                     <i class="fa-solid fa-xmark toggle-close"></i>
                 </span>
             </div>
 
+            <!-- nav link -->
             <ul class="nav-link">
                 <a href="#home">
                     <li class="active">Beranda</li>
@@ -52,172 +57,224 @@
                 </a>
             </ul>
         </nav>
+        <!-- wrapper navbar end -->
 
-        <!-- hero image -->
+        <!-- hero image start -->
         <header class="hero-image">
+            <!-- image slide one -->
             <figure class="slide-one">
                 <img src="https://images.unsplash.com/photo-1625047509248-ec889cbff17f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1032&q=80"
                     alt="image">
             </figure>
+            <!-- image slide two -->
             <figure class="slide-two">
                 <img src="https://images.unsplash.com/photo-1597766325363-f5576d851d6a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80"
                     alt="image">
             </figure>
+            <!-- image slide three -->
             <figure class="slide-three">
                 <img src="https://images.unsplash.com/photo-1632733711679-529326f6db12?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80"
                     alt="image">
             </figure>
+            <!-- image slide four -->
             <figure class="slide-four">
                 <img src="https://images.unsplash.com/photo-1625047509248-ec889cbff17f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1032&q=80"
                     alt="image">
             </figure>
+            <!-- hero text start -->
             <div class="hero-text">
                 <h1 class="title">WAWA AUTO MOBIL</h1>
                 <p class="description">Servis Mobil Dengan Harga Terbaik Dan Hasil Yang Memuaskan</p>
+                <!-- button group -->
                 <div class="button-group">
-                    <button type="submit" class="btn-hero-explore" onclick="btnExplore()"><i
+                    <!-- btn hero explore -->
+                    <button type="submit" class="btn-hero-explore" onclick="btnHeroExplore()"><i
                             class="fa-solid fa-car-side" style="margin-right: .5em;"></i>Jelajahi</button>
-                    <button type="submit" class="btn-hero-schedule" onclick="btnSchedule()"><i
+                    <!-- btn hero contact -->
+                    <button type="submit" class="btn-hero-contact" onclick="btnHeroContact()"><i
                             class="fa-solid fa-file-signature" style="margin-right: .5em;"></i>Buat Jadwal</button>
                 </div>
             </div>
+            <!-- hero text end -->
         </header>
+        <!-- hero image end -->
 
-        <!-- header card -->
-        <section class="header-card">
+        <!-- headline card start -->
+        <section class="headline-card">
+            <!-- wrapper -->
             <div class="wrapper">
                 <i class="fa-solid fa-money-bill-1-wave"></i>
                 <h4 class="title">Harga</h4>
                 <p class="description">Biaya servis terjangkau dan hasil yang maksimal</p>
             </div>
+            <!-- wrapper -->
             <div class="wrapper">
                 <i class="fa-solid fa-headset"></i>
                 <h4 class="title">Layanan</h4>
                 <p class="description">Dukungan konsultasi atau buat jadwal servis</p>
             </div>
+            <!-- wrapper -->
             <div class="wrapper">
                 <i class="fa-solid fa-people-group"></i>
                 <h4 class="title">Kualitas</h4>
                 <p class="description">Ditangani oleh tim profesional yang berpengalaman</p>
             </div>
         </section>
+        <!-- headline card end -->
 
         <!-- wrapper section start -->
         <main class="wrapper-section">
-            <!-- profile -->
+            <!-- profile start -->
             <section id="profile">
                 <article class="profile">
                     <h2 class="title"><span>Profil</span> Bengkel</h2>
+                    <!-- card -->
                     <figure class="card">
+                        <!-- image -->
                         <div class="image">
                             <img src="https://images.unsplash.com/photo-1602932365975-18086e1491b4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=872&q=80"
                                 alt="image">
                         </div>
-                        <figcaption class="description">
-                            <div class="heading">
+                        <!-- caption -->
+                        <figcaption class="caption">
+                            <div class="subtitle">
                                 <h3>Wawa Auto Mobil</h3>
                             </div>
-                            <p class="caption">
+                            <p class="description">
                                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum, aperiam consequuntur
                                 eligendi ullam voluptatem magnam temporibus aliquam, voluptates sed maxime inventore,
                                 fugiat
                                 eum fugit consectetur quas? Doloribus est repellendus commodi perferendis optio quam
                                 laudantium distinctio?
                             </p>
+                            <!-- btn profile -->
                             <button type="submit" class="btn-profile" onclick="btnProfile()">Baca Selengkapnya</button>
                         </figcaption>
                     </figure>
                 </article>
             </section>
+            <!-- profile end -->
 
-            <!-- triger card -->
-            <section id="triger-card">
+            <!-- middle line card start -->
+            <section id="middle-line-card">
                 <h2 class="title">Kenapa harus servis dan rawat mobil Anda di Wawa Auto Mobil?</h2>
                 <p class="description">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Earum dignissimos nemo
                     fugiat facere veritatis! Cum magnam commodi neque eos, autem necessitatibus, impedit consequatur
                     sint beatae possimus vel architecto quaerat laudantium ad culpa quasi temporibus placeat.</p>
             </section>
+            <!-- middle line card end -->
 
-            <!-- service -->
+            <!-- service start -->
             <section id="service">
                 <article class="service">
                     <h2 class="title"><span>Layanan</span> Kami</h2>
+                    <!-- card -->
                     <figure class="card">
+                        <!-- image -->
                         <div class="image">
                             <img src="https://images.unsplash.com/photo-1642767226927-0f08d21d0c63?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MzUxfHxtZWNoYW5pY3xlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60"
                                 alt="image" alt="image" loading="lazy">
                         </div>
-                        <figcaption class="description">
-                            <div class="heading">
+                        <!-- caption -->
+                        <figcaption class="caption">
+                            <div class="subtitle">
                                 <h3><i class="fa-solid fa-circle-check" style="margin-right: .5em;"></i>Reparasi</h3>
                             </div>
-                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Perspiciatis quia libero
-                            accusantium pariatur quos repellendus tenetur. Mollitia corrupti eum impedit.
+                            <p class="description">
+                                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Perspiciatis quia libero
+                                accusantium pariatur quos repellendus tenetur. Mollitia corrupti eum impedit.
+                            </p>
                         </figcaption>
                     </figure>
+                    <!-- card -->
                     <figure class="card">
+                        <!-- image -->
                         <div class="image">
                             <img src="https://images.unsplash.com/photo-1643700973089-baa86a1ab9ee?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDF8fHxlbnwwfHx8fHw%3D&auto=format&fit=crop&w=500&q=60"
                                 alt="image" alt="image" loading="lazy">
                         </div>
-                        <figcaption class="description">
-                            <div class="heading">
+                        <!-- caption -->
+                        <figcaption class="caption">
+                            <div class="subtitle">
                                 <h3><i class="fa-solid fa-circle-check" style="margin-right: .5em;"></i>Ganti Oli</h3>
                             </div>
-                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eos, quibusdam. Adipisci, velit?
-                            Labore repellendus cumque architecto pariatur cupiditate quam officia!
+                            <p class="description">
+                                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eos, quibusdam. Adipisci,
+                                velit?
+                                Labore repellendus cumque architecto pariatur cupiditate quam officia!
+                            </p>
                         </figcaption>
                     </figure>
+                    <!-- card -->
                     <figure class="card">
+                        <!-- image -->
                         <div class="image">
                             <img src="https://images.unsplash.com/photo-1643701079732-3b1c7a797e3d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=387&q=80"
                                 alt="image" alt="image" loading="lazy">
                         </div>
-                        <figcaption class="description">
-                            <div class="heading">
+                        <!-- caption -->
+                        <figcaption class="caption">
+                            <div class="subtitle">
                                 <h3><i class="fa-solid fa-circle-check" style="margin-right: .5em;"></i>Overhaul</h3>
                             </div>
-                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Harum asperiores eum rerum debitis
-                            ipsa suscipit sit, eius dolorem praesentium nisi.
+                            <p class="description">
+                                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Harum asperiores eum rerum
+                                debitis
+                                ipsa suscipit sit, eius dolorem praesentium nisi.
+                            </p>
                         </figcaption>
                     </figure>
+                    <!-- card -->
                     <figure class="card">
+                        <!-- image -->
                         <div class="image">
                             <img src="https://images.unsplash.com/photo-1615906655593-ad0386982a0f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8bWVjaGFuaWNzfGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60"
                                 alt="image" alt="image" loading="lazy">
                         </div>
-                        <figcaption class="description">
-                            <div class="heading">
+                        <!-- caption -->
+                        <figcaption class="caption">
+                            <div class="subtitle">
                                 <h3><i class="fa-solid fa-circle-check" style="margin-right: .5em;"></i>Tune Up</h3>
                             </div>
-                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laboriosam neque id soluta et
-                            porro consequatur esse cumque, dolorum harum nam.
+                            <p class="description">
+                                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laboriosam neque id soluta et
+                                porro consequatur esse cumque, dolorum harum nam.
+                            </p>
                         </figcaption>
                     </figure>
+                    <!-- card -->
                     <figure class="card">
+                        <!-- image -->
                         <div class="image">
                             <img src="https://images.unsplash.com/photo-1619642751034-765dfdf7c58e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80"
                                 alt="image" alt="image" loading="lazy">
                         </div>
-                        <figcaption class="description">
-                            <div class="heading">
+                        <!-- caption -->
+                        <figcaption class="caption">
+                            <div class="subtitle">
                                 <h3><i class="fa-solid fa-circle-check" style="margin-right: .5em;"></i>Gurah Mesin</h3>
                             </div>
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente itaque ratione magni
-                            consequatur non nesciunt error dicta voluptatibus quaerat fugit?
+                            <p class="description">
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente itaque ratione magni
+                                consequatur non nesciunt error dicta voluptatibus quaerat fugit?
+                            </p>
                         </figcaption>
                     </figure>
+                    <!-- btn service -->
                     <div class="btn-service">
                         <a href="./pages/service.html">Lihat Semua Layanan</a>
                     </div>
                 </article>
             </section>
+            <!-- service end -->
 
-            <!-- testimoni -->
+            <!-- testimoni start -->
             <section id="testimoni">
                 <article class="testimoni">
                     <h2 class="title"><span>Kata</span> Mereka</h2>
+                    <!-- scroller start -->
                     <div class="scroller">
+                        <!-- wrapper -->
                         <div class="wrapper">
                             <figure class="card">
                                 <img src="https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8cGVvcGxlfGVufDB8MXwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60"
@@ -229,17 +286,18 @@
                                     <i class="fa-solid fa-star"></i>
                                     <i class="fa-solid fa-star"></i>
                                 </div>
-                                <figcaption class="description">
+                                <figcaption class="caption">
                                     <div class="username">
                                         <h3>Ian Dolley</h3>
                                     </div>
                                     <i class="fa-solid fa-quote-left quote-icon"></i>
-                                    <p>Lorem ipsum dolor sit amet
+                                    <p class="description">Lorem ipsum dolor sit amet
                                         consectetur adipisicing elit. Minima corrupti
                                         perferendis dolor tenetur similique aut.</p>
                                 </figcaption>
                             </figure>
                         </div>
+                        <!-- wrapper -->
                         <div class="wrapper">
                             <figure class="card">
                                 <img
@@ -251,17 +309,18 @@
                                     <i class="fa-solid fa-star"></i>
                                     <i class="fa-regular fa-star"></i>
                                 </div>
-                                <figcaption class="description">
+                                <figcaption class="caption">
                                     <div class="username">
                                         <h3>Samanta Barba</h3>
                                     </div>
                                     <i class="fa-solid fa-quote-left quote-icon"></i>
-                                    <p>Lorem ipsum dolor sit amet
+                                    <p class="description">Lorem ipsum dolor sit amet
                                         consectetur adipisicing elit. Asperiores, autem quas.
                                         Aut necessitatibus inventore odit.</p>
                                 </figcaption>
                             </figure>
                         </div>
+                        <!-- wrapper -->
                         <div class="wrapper">
                             <figure class="card">
                                 <img src="https://images.unsplash.com/photo-1529111290557-82f6d5c6cf85?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=393&q=80"
@@ -273,17 +332,18 @@
                                     <i class="fa-solid fa-star"></i>
                                     <i class="fa-solid fa-star"></i>
                                 </div>
-                                <figcaption class="description">
+                                <figcaption class="caption">
                                     <div class="username">
                                         <h3>Pavel Anoshin</h3>
                                     </div>
                                     <i class="fa-solid fa-quote-left quote-icon"></i>
-                                    <p>Lorem ipsum dolor sit amet
+                                    <p class="description">Lorem ipsum dolor sit amet
                                         consectetur adipisicing elit. Cupiditate, nihil?
                                         Deleniti voluptatibus velit nulla sunt.</p>
                                 </figcaption>
                             </figure>
                         </div>
+                        <!-- wrapper -->
                         <div class="wrapper">
                             <figure class="card">
                                 <img src="https://images.unsplash.com/photo-1535325019257-3f8a7994a3f3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OTV8fHBlb3BsZSUyMGZhY2V8ZW58MHwxfDB8fHww&auto=format&fit=crop&w=500&q=60"
@@ -295,17 +355,18 @@
                                     <i class="fa-solid fa-star"></i>
                                     <i class="fa-solid fa-star"></i>
                                 </div>
-                                <figcaption class="description">
+                                <figcaption class="caption">
                                     <div class="username">
                                         <h3>Justin Clark</h3>
                                     </div>
                                     <i class="fa-solid fa-quote-left quote-icon"></i>
-                                    <p>Lorem ipsum dolor sit amet
+                                    <p class="description">Lorem ipsum dolor sit amet
                                         consectetur adipisicing elit. Explicabo laudantium
                                         tenetur dolorum velit beatae consectetur!</p>
                                 </figcaption>
                             </figure>
                         </div>
+                        <!-- wrapper -->
                         <div class="wrapper">
                             <figure class="card">
                                 <img src="https://images.unsplash.com/photo-1512484776495-a09d92e87c3b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTA1fHxwZW9wbGUlMjBmYWNlfGVufDB8MXwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60"
@@ -317,17 +378,18 @@
                                     <i class="fa-solid fa-star"></i>
                                     <i class="fa-regular fa-star"></i>
                                 </div>
-                                <figcaption class="description">
+                                <figcaption class="caption">
                                     <div class="username">
                                         <h3>Petr Sevcovic</h3>
                                     </div>
                                     <i class="fa-solid fa-quote-left quote-icon"></i>
-                                    <p>Lorem ipsum, dolor sit amet
+                                    <p class="description">Lorem ipsum, dolor sit amet
                                         consectetur adipisicing elit. Minus fugiat, nisi
                                         nemo voluptate error molestias.</p>
                                 </figcaption>
                             </figure>
                         </div>
+                        <!-- wrapper -->
                         <div class="wrapper">
                             <figure class="card">
                                 <img src="https://images.unsplash.com/photo-1508341591423-4347099e1f19?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTg1fHxwZW9wbGUlMjBmYWNlfGVufDB8MXwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60"
@@ -339,103 +401,119 @@
                                     <i class="fa-solid fa-star"></i>
                                     <i class="fa-solid fa-star"></i>
                                 </div>
-                                <figcaption class="description">
+                                <figcaption class="caption">
                                     <div class="username">
                                         <h3>Robert Godwin</h3>
                                     </div>
                                     <i class="fa-solid fa-quote-left quote-icon"></i>
-                                    <p>Lorem ipsum dolor sit amet
+                                    <p class="description">Lorem ipsum dolor sit amet
                                         consectetur adipisicing elit. Sequi commodi porro ut
                                         pariatur. Eius, quibusdam.</p>
                                 </figcaption>
                             </figure>
                         </div>
                     </div>
+                    <!-- scroller end -->
                 </article>
             </section>
+            <!-- testimoni end -->
 
-            <!-- contact -->
+            <!-- contact start -->
             <section id="contact">
                 <article class="contact">
                     <h2 class="title"><span>Hubungi</span> Kami</h2>
+                    <!-- wrapper start -->
                     <div class="wrapper">
-                        <div class="card">
-                            <h3 class="card-title">Lokasi Bengkel</h3>
-                            <div class="location">
+                        <!-- location -->
+                        <div class="location">
+                            <h3 class="subtitle">Lokasi Bengkel</h3>
+                            <div class="map-direction">
                                 <iframe
                                     src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15860.141644405343!2d106.8193184!3d-6.3894323!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69eb23892f3fd7%3A0x23de26d2aca34926!2sBengkel%20Mobil%20(Wawa%20auto%20mobil)%20depok!5e0!3m2!1sen!2sid!4v1689869477816!5m2!1sen!2sid"
                                     allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                                <button type="submit" class="btn-location" onclick="btnLocation()"><i
+                                <!-- btn direction -->
+                                <button type="submit" class="btn-direction" onclick="btnDirection()"><i
                                         class="fa-solid fa-car-side" style="margin-right: .5em;"></i>Buka Map</button>
                             </div>
                         </div>
+                        <!-- form group -->
                         <form action="" class="form-group">
-                            <h3 class="form-title">Buat Jadwal Atau Konsultasi</h3>
+                            <h3 class="subtitle">Buat Jadwal Atau Konsultasi</h3>
                             <div class="input-section">
                                 <input type="text" name="username" placeholder="Nama">
                                 <input type="email" name="email" placeholder="Email">
                                 <input type="tel" name="phone-number" placeholder="Telepon">
                                 <textarea name="message" placeholder="Pesan"></textarea>
-                                <button type="submit" class="btn-form"><i class="fa-solid fa-paper-plane"
+                                <!-- btn send message -->
+                                <button type="submit" class="btn-send-message"><i class="fa-solid fa-paper-plane"
                                         style="margin-right: .5em;"></i>Kirim</button>
                             </div>
                         </form>
                     </div>
+                    <!-- wrapper end -->
                 </article>
             </section>
+            <!-- contact end -->
 
-            <section class="accordion">
+            <!-- frequently ask question start -->
+            <section class="frequently-ask-question" id="faq">
                 <h3 class="title">Pertanyaan yang sering diajukan:</h3>
+                <!-- wrapper start -->
                 <div class="wrapper">
+                    <!-- list -->
                     <div class="list">
-                        <div class="btn-accordion">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Possimus,
+                        <div class="btn-faq">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Possimus,
                             provident?<i class="fa-solid fa-chevron-down"></i>
                         </div>
-                        <div class="panel">
+                        <div class="description">
                             <p><span>Jawaban:</span> Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita
                                 exercitationem
                                 voluptatibus
                                 aperiam officia ex ipsam a laboriosam sunt minima quod!</p>
                         </div>
                     </div>
+                    <!-- list -->
                     <div class="list">
-                        <div class="btn-accordion">Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur,
+                        <div class="btn-faq">Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur,
                             debitis?<i class="fa-solid fa-chevron-down"></i>
                         </div>
-                        <div class="panel">
+                        <div class="description">
                             <p><span>Jawaban:</span> Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic
                                 commodi rerum ullam
                                 doloremque
                                 facilis nobis quibusdam corrupti culpa nesciunt minus.</p>
                         </div>
                     </div>
+                    <!-- list -->
                     <div class="list">
-                        <div class="btn-accordion">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur,
+                        <div class="btn-faq">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur,
                             consequuntur?<i class="fa-solid fa-chevron-down"></i>
                         </div>
-                        <div class="panel">
+                        <div class="description">
                             <p><span>Jawaban:</span> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Mollitia
                                 sit voluptate et
                                 dolorem
                                 tempora corporis repellendus omnis adipisci a laudantium!</p>
                         </div>
                     </div>
+                    <!-- list -->
                     <div class="list">
-                        <div class="btn-accordion">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vel,
+                        <div class="btn-faq">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vel,
                             dolor?<i class="fa-solid fa-chevron-down"></i>
                         </div>
-                        <div class="panel">
+                        <div class="description">
                             <p><span>Jawaban:</span> Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos dicta
                                 voluptatibus
                                 similique,
                                 vero quidem quisquam adipisci consequuntur neque facere debitis?</p>
                         </div>
                     </div>
+                    <!-- list -->
                     <div class="list">
-                        <div class="btn-accordion">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero,
+                        <div class="btn-faq">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero,
                             nemo?<i class="fa-solid fa-chevron-down"></i>
                         </div>
-                        <div class="panel">
+                        <div class="description">
                             <p><span>Jawaban:</span> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aut vero
                                 sunt quibusdam
                                 cupiditate
@@ -443,15 +521,19 @@
                         </div>
                     </div>
                 </div>
+                <!-- wrapper end -->
             </section>
+            <!-- frequently ask question end -->
         </main>
         <!-- wrapper section end -->
 
-        <!-- footer -->
+        <!-- footer start -->
         <footer class="footer">
+            <!-- wrapper start -->
             <div class="wrapper">
+                <!-- company card -->
                 <div class="company-card">
-                    <blockquote cite="https://dediindrawan.github.io/wawa-auto-mobil/" class="heading">
+                    <blockquote cite="https://dediindrawan.github.io/wawa-auto-mobil/" class="header">
                         <div class="logo">
                             <img src="./public/assets/LogoWawaAutoMobil.png" alt="logo">
                         </div>
@@ -459,6 +541,7 @@
                         <p class="description">Servis Mobil Dengan Harga Terbaik Dan Hasil Yang Memuaskan</p>
                     </blockquote>
 
+                    <!-- list -->
                     <ul class="list">
                         <li><i class="fa-solid fa-location-dot"></i>Jl.Naming D Bothin
                             No.106D
@@ -473,34 +556,43 @@
                     </ul>
                 </div>
 
-                <div class="listing">
+                <!-- list information start -->
+                <div class="list-information">
+                    <!-- operasional card -->
                     <div class="operasional-card">
-                        <blockquote cite="https://dediindrawan.github.io/wawa-auto-mobil/" class="heading">
-                            <h4 class="footer-operasional-title">Jam Operasional</h4>
+                        <blockquote cite="https://dediindrawan.github.io/wawa-auto-mobil/" class="header">
+                            <h4 class="title">Jam Operasional</h4>
                         </blockquote>
 
+                        <!-- list -->
                         <ul class="list">
-                            <li><span>Sabtu - Kamis:</span><span class="office-hour">09:00 - 17:00 wib</span></li>
-                            <li><span>Jumat:</span><span class="office-hour">Operasional Libur</span></li>
+                            <li><span>Sabtu - Kamis:</span><span class="operasional">09:00 - 17:00 wib</span></li>
+                            <li><span>Jumat:</span><span class="operasional">Operasional Libur</span></li>
                         </ul>
                     </div>
+
+                    <!-- blog card -->
                     <div class="blog-card">
-                        <blockquote cite="https://dediindrawan.github.io/wawa-auto-mobil/" class="heading">
+                        <blockquote cite="https://dediindrawan.github.io/wawa-auto-mobil/" class="header">
                             <h4 class="title">Blog</h4>
                         </blockquote>
 
+                        <!-- list -->
                         <ul class="list">
-                            <li><a href="#">Beranda</a></li>
+                            <li><a href="index.html">Beranda</a></li>
                             <li><a href="#">Profil</a></li>
-                            <li><a href="#">Layanan</a></li>
-                            <li><a href="#">FAQ</a></li>
+                            <li><a href="./pages/service.html">Layanan</a></li>
+                            <li><a href="#faq">FAQ</a></li>
                         </ul>
                     </div>
+
+                    <!-- documentation card -->
                     <div class="documentation-card">
-                        <blockquote cite="https://dediindrawan.github.io/wawa-auto-mobil/" class="heading">
+                        <blockquote cite="https://dediindrawan.github.io/wawa-auto-mobil/" class="header">
                             <h4 class="title">Dokumen</h4>
                         </blockquote>
 
+                        <!-- list -->
                         <ul class="list">
                             <li><a href="#">Sitemap</a></li>
                             <li><a href="#">Disclaimer</a></li>
@@ -509,10 +601,15 @@
                         </ul>
                     </div>
                 </div>
+                <!-- list information end -->
             </div>
+            <!-- wrapper end -->
+
+            <!-- copyright -->
             <div class="copyright">All Right Reserve &copy; <span class="copy-year"></span> | <a href="index.html">Wawa
                     Auto Mobil</a></div>
         </footer>
+        <!-- footer end -->
     </div>
     <!-- container end -->
 
