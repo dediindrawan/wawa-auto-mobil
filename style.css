@@ -388,7 +388,7 @@ body {
   background: linear-gradient(to top right, #0f172a, #475569);
   transition: padding 0.3s;
   width: 200px;
-  background: linear-gradient(to top right, #f59e0b, #eab308);
+  background: dodgerblue;
 }
 .container .hero-image .hero-text .button-group .btn-hero-contact:hover {
   padding: 0.75em 1.5em;
