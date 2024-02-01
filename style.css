@@ -675,6 +675,26 @@ body {
     margin-top: 2em;
   }
 }
+.container .wrapper-section .service .table {
+  width: 100%;
+}
+.container .wrapper-section .service .table .list {
+  width: 100%;
+  margin-bottom: 1em;
+}
+.container .wrapper-section .service .table .list thead tr th {
+  width: 80%;
+  padding: 1em;
+  border-top: 1px solid;
+  border-right: 1px solid;
+  border-bottom: 1px solid;
+}
+.container .wrapper-section .service .table .list tbody tr td {
+  width: 20%;
+  padding: 0.5em;
+  border-right: 1px solid;
+  border-bottom: 1px solid;
+}
 .container .wrapper-section .service .package:not(:first-child) {
   margin-top: 4em;
 }

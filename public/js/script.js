@@ -113,3 +113,43 @@ let copyYear = document.querySelector('.copy-year'),
     date = new Date(), year;
 year = date.getFullYear();
 copyYear.textContent = `${year}`;
+
+
+const data = "/server-side/data.json";
+const wrapperItem = document.querySelector('.wrapper-item');
+
+function getListItem() {
+    fetch(data)
+        .then(response => {
+            return response.json();
+        }).then(responseJson => {
+            wrapperItem.innerHTML = '';
+            let items = responseJson.product;
+            items.forEach(element => {
+                wrapperItem.innerHTML +=
+                    `
+                    <li class="list-item" onclick="openOverlay()">
+                        <figure>
+                            <img class="image-item"
+                                src="${element.image}"
+                                alt="image">
+                            <small class="category-item">${element.category}</small>
+                        </figure>
+                        <figcaption>
+                            <div class="title-item">${element.title}</div>
+                            <div class="price-item">Rp${element.price},-</div>
+                            <span>
+                                <small class="location-item"><i class="fa-solid fa-map-location"></i> ${element.location}</small>
+                                <small class="rating-item"><i class="fa-solid fa-star"></i> ${element.rating}</small>
+                            </span>
+                            <div class="description-item">${element.decription}</div>
+                        </figcaption>
+                    </li>
+                `
+            });
+
+        }).catch(error => {
+            console.error(error);
+        });
+};
+getListItem();

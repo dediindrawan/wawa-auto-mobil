@@ -1,0 +1,107 @@
+{
+    "product": [
+      {
+        "product_menu": "Blackberry Jam 500g",
+        "normal_price": "10.0"
+      },
+      {
+        "product_menu": "Strawberry Jam 500g",
+        "normal_price": "10.0"
+      },
+      {
+        "product_menu": "Peach Jam 500g",
+        "normal_price": "10.0"
+      },
+      {
+        "product_menu": "Blackberry Jam 390g",
+        "normal_price": "10.0"
+      },
+      {
+        "product_menu": "Strawberry Jam 390g",
+        "normal_price": "10.0"
+      },
+      {
+        "product_menu": "Peach Jam 390g",
+        "normal_price": "10.0"
+      }
+    ],
+  
+    "promo": [
+      {
+        "product_promo": "Two Jam 500g",
+        "promo_price": "15.0"
+      },
+      {
+        "product_promo": "Two Jam 500g",
+        "promo_price": "15.0"
+      },
+      {
+        "product_promo": "One Jam 500g + Jam 390g",
+        "promo_price": "15.0"
+      },
+      {
+        "product_promo": "30 Units",
+        "promo_price": "65.0"
+      },
+      {
+        "product_promo": "Combo 500g",
+        "promo_price": "25.0"
+      },
+      {
+        "product_promo": "Combo 500g",
+        "promo_price": "25.0"
+      }
+    ],
+  
+    "card": [
+      {
+        "category": "Blackberry",
+        "card_image": "https://dulzura.andevfrontend.com/img/cards/card-1.jpg",
+        "card_title": "Blackberry Jam",
+        "card_price": "10.00"
+      },
+      {
+        "category": "Strawberry",
+        "card_image": "https://dulzura.andevfrontend.com/img/cards/card-2.jpg",
+        "card_title": "Strawberry Jam",
+        "card_price": "10.00"
+      },
+      {
+        "category": "Peach",
+        "card_image": "https://dulzura.andevfrontend.com/img/cards/card-3.jpg",
+        "card_title": "Peach Jam",
+        "card_price": "10.00"
+      },
+      {
+        "category": "Blackberry",
+        "card_image": "https://dulzura.andevfrontend.com/img/cards/card-4.jpg",
+        "card_title": "Blackberry Jam",
+        "card_price": "10.00"
+      },
+      {
+        "category": "Strawberry",
+        "card_image": "https://dulzura.andevfrontend.com/img/cards/card-5.jpg",
+        "card_title": "Strawberry Jam",
+        "card_price": "10.00"
+      },
+      {
+        "category": "Peach",
+        "card_image": "https://dulzura.andevfrontend.com/img/cards/card-6.jpg",
+        "card_title": "Peach Jam",
+        "card_price": "10.00"
+      },
+      {
+        "category": "500g",
+        "card_image": "https://dulzura.andevfrontend.com/img/cards/kit-1.jpg",
+        "card_title": "Combo 500g",
+        "card_price": "25.00"
+      },
+      {
+        "category": "390g",
+        "card_image": "https://dulzura.andevfrontend.com/img/cards/kit-2.jpg",
+        "card_title": "Combo 390g",
+        "card_price": "25.00"
+      }
+    ]
+  }
+  
